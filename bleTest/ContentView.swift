@@ -11,7 +11,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List(bluetoothUIKitConverters.peripheralsArr.keys.sorted().map { String($0)}, id: \.self){i in
-                Text(i)
+                Button(i, action: {
+                    
+                })
             }
             
         }.onAppear(perform: {
