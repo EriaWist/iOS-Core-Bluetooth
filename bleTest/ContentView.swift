@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack {
             List(bluetoothUIKitConverters.peripheralsArr.keys.sorted().map { String($0)}, id: \.self){i in
                 Button(i, action: {
-                    
+                    bluetoothUIKitConverters.connect(peripheral: bluetoothUIKitConverters.peripheralsArr[i]!)
                 })
             }
             
