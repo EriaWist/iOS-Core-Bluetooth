@@ -7,14 +7,9 @@
 
 import UIKit
 import CoreBluetooth
-class ViewController: UIViewController,ObservableObject {
+class ViewController: NSObject,ObservableObject {
     var centralManager:CBCentralManager!
     @Published var peripheralsArr=[String:CBPeripheral]()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setUP()
-        // Do any additional setup after loading the view.
-    }
     
     func setUP(){
         centralManager = CBCentralManager(delegate: self, queue: nil) //
